@@ -2,14 +2,19 @@ import { Feather } from '@expo/vector-icons';
 
 import styled, { css } from 'styled-components/native';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   ${({ theme }) => css`
     width: 100%;
     height: ${RFPercentage(42)}px;
     background: ${theme.colors.primary};
-    padding: 0 ${RFValue(24)}px;
+    padding: ${getStatusBarHeight() + RFValue(28)}px ${RFValue(24)}px 0;
+  `}
+`;
 
+export const Content = styled.View`
+  ${() => css`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
