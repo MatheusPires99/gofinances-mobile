@@ -1,15 +1,9 @@
 import styled, { css } from 'styled-components/native';
 
 export const Container = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const Title = styled.Text`
   ${({ theme }) => css`
-    font-size: 24px;
-    font-family: ${theme.fonts.bold};
-    color: ${theme.colors.title};
+    background: ${theme.colors.background};
+
+    flex: 1;
   `}
 `;

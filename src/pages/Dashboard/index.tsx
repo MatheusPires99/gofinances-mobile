@@ -1,11 +1,12 @@
 import React from 'react';
 
+import { Header } from '../../components/Header';
 import * as S from './styles';
 
 export const Dashboard = () => {
   return (
     <S.Container>
-      <S.Title>Dashboard</S.Title>
+      <Header />
     </S.Container>
   );
 };
